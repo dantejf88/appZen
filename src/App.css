@@ -1,0 +1,150 @@
+body,html, #root, .App {
+  margin: 0;
+  height: 100%;
+  flex:1;
+  display: flex;
+}
+.App{
+  flex-direction: column;
+}
+.LoadingContainer{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Meditating {
+  font-family: 'Buda', cursive;
+  font-size: 80px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+.spinner:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  content: " ";
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #cef;
+  border-color: #cef transparent #cef transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.firstBox{
+  flex:2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-height: 150px;
+}
+.flexCenter{
+  font-size: 30px;
+  font-family: 'Buda', cursive;
+  flex:1;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
+.secondBox{
+  flex:3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-height: 150px;
+}
+.secondBoxButtons{
+  flex: 1;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.buttons{
+  font-size: 25px;
+  background-color: white;
+  border-radius: 10px;
+  font-family: 'Buda', cursive;
+}
+.secondBoxText{
+  flex:3;
+  height: 100%;
+  font-size: 40px;
+  font-family: 'Buda', cursive;
+  text-shadow: 4px 4px 4px #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  flex-direction: column;
+  text-align: center;
+}
+.showText {
+  opacity: 1;
+  animation: fadeIn .3s linear;
+}
+@keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: .35;
+        }
+      75% {
+        opacity: .70;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+.hideText {
+  opacity: 0;
+  animation: fadeOut .3s linear;
+}
+@keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      25% {
+        opacity: .70;
+        }
+      75% {
+        opacity: .30;
+      }
+      100% {
+        opacity: 0;
+      }
+  }
+.thirdBox{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+@media screen and (max-width: 500px) {
+  .LoadingContainer .Meditating  {
+    font-size: 60px;
+  }
+  .flexCenter{
+    font-size: 25px;
+  }
+  .secondBox {
+    flex-direction: column-reverse;
+  }
+  .secondBoxText {
+    font-size: 30px;
+  }
+}
