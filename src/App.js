@@ -40,9 +40,6 @@ export default class App extends Component {
                 this.new()
             }
           })
-          .catch((error) => {
-            throw new Error('GET request failed', error);
-          })
       })
     } if(sentenceState.length === 13) {
       setTimeout(() => {
